@@ -256,9 +256,9 @@ const MatchingCardsGame: React.FC<MatchingCardsGameProps> = ({ onBack }) => {
                   {level}
                 </h3>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                  {level === 'easy' && '6 pairs • Basic vocabulary'}
-                  {level === 'medium' && '8 pairs • Intermediate words'}
-                  {level === 'hard' && '10 pairs • Advanced vocabulary'}
+                  {level === 'easy' && `${vocabularyPairs[level].length} pairs • Basic vocabulary`}
+                  {level === 'medium' && `${vocabularyPairs[level].length} pairs • Intermediate words`}
+                  {level === 'hard' && `${vocabularyPairs[level].length} pairs • Advanced vocabulary`}
                 </div>
                 <Button className="w-full">
                   <Play className="w-4 h-4 mr-2" />
@@ -444,7 +444,7 @@ const MatchingCardsGame: React.FC<MatchingCardsGameProps> = ({ onBack }) => {
                     <CardContent className="h-full flex items-center justify-center p-2">
                       <div className="text-white text-center">
                         <Target className="w-8 h-8 mx-auto mb-2" />
-                        <div className="text-xs font-medium">IELTS</div>
+                        <div className="text-xs font-medium">English</div>
                       </div>
                     </CardContent>
                   </Card>
